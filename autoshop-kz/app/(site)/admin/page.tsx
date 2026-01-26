@@ -73,13 +73,12 @@ export default function AdminPage() {
               <Label htmlFor="password">Пароль</Label>
               <Input
                 id="password"
-                type="text"
+                type="password"
                 autoComplete="off"
                 placeholder="Введите пароль"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="h-12 text-lg font-mono"
-                style={{ WebkitTextSecurity: 'disc' }}
               />
             </div>
             {error && <p className="text-red-500 text-sm mt-2">Неверный логин или пароль</p>}
