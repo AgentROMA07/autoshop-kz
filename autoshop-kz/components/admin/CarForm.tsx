@@ -237,7 +237,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
               onChange={e => setFormData({
                 ...formData, 
                 description: { 
-                  ru: typeof formData.description === 'object' ? formData.description.ru : (formData.description as string || ''), 
+                  ru: typeof formData.description === 'object' ? formData.description.ru : (formData.description as unknown as string || ''), 
                   kz: e.target.value 
                 }
               })}
