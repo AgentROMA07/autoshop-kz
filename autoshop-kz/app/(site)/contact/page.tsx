@@ -11,7 +11,7 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold text-center">{dictionary.contact.title}</h1>
         </Container>
       </div>
-      <ContactSection dictionary={dictionary} />
+      <ContactSection dictionary={dictionary} withTitle={false} />
     </div>
   );
 }

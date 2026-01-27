@@ -5,8 +5,9 @@ export interface Car {
   year: number;
   price: number;
   mileage: number; // in km
-  bodyType: 'sedan' | 'suv' | 'hatchback' | 'coupe' | 'van';
-  fuelType: 'petrol' | 'diesel' | 'electric' | 'hybrid';
+  bodyType: 'sedan' | 'suv' | 'hatchback' | 'coupe' | 'van' | 'pickup' | 'wagon';
+  condition: 'new' | 'used';
+  fuelType: 'petrol' | 'diesel' | 'electric' | 'hybrid' | 'gas';
   transmission: 'automatic' | 'manual' | 'robot' | 'cvt';
   driveType: 'fwd' | 'rwd' | 'awd';
   engineVolume?: number; // e.g. 2.5
@@ -78,6 +79,7 @@ export const cars: Car[] = [
     price: 15500000,
     mileage: 0,
     bodyType: 'sedan',
+    condition: 'new',
     fuelType: 'petrol',
     transmission: 'automatic',
     driveType: 'fwd',
@@ -100,6 +102,7 @@ export const cars: Car[] = [
     price: 45000000,
     mileage: 15000,
     bodyType: 'suv',
+    condition: 'used',
     fuelType: 'petrol',
     transmission: 'automatic',
     driveType: 'awd',
@@ -122,6 +125,7 @@ export const cars: Car[] = [
     price: 28000000,
     mileage: 5000,
     bodyType: 'sedan',
+    condition: 'used',
     fuelType: 'petrol',
     transmission: 'automatic',
     driveType: 'rwd',
@@ -144,6 +148,7 @@ export const cars: Car[] = [
     price: 12500000,
     mileage: 25000,
     bodyType: 'sedan',
+    condition: 'used',
     fuelType: 'petrol',
     transmission: 'automatic',
     driveType: 'fwd',
@@ -166,6 +171,7 @@ export const cars: Car[] = [
     price: 13800000,
     mileage: 8000,
     bodyType: 'sedan',
+    condition: 'used',
     fuelType: 'petrol',
     transmission: 'automatic',
     driveType: 'fwd',
@@ -188,6 +194,7 @@ export const cars: Car[] = [
     price: 24000000,
     mileage: 35000,
     bodyType: 'sedan',
+    condition: 'used',
     fuelType: 'diesel',
     transmission: 'automatic',
     driveType: 'awd',

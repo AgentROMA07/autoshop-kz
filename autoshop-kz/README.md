@@ -1,4 +1,4 @@
-# AutoShop KZ - Dealer Website Template
+# Aqylbay auto market - Dealer Website Template
 
 Premium, production-ready landing website template for car dealerships with bilingual (KZ/RU) support and a strict brand identity system.
 

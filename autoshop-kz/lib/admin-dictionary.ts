@@ -46,6 +46,11 @@ export const adminDictionary = {
       cancel: "Отмена",
       saving: "Сохранение...",
       selectOption: "Выберите...",
+      condition: "Состояние",
+      conditions: {
+        new: "Новые",
+        used: "С пробегом"
+      },
       bodyTypes: {
         sedan: "Седан",
         suv: "Внедорожник",
@@ -58,6 +63,7 @@ export const adminDictionary = {
       fuelTypes: {
         petrol: "Бензин",
         diesel: "Дизель",
+        gas: "Газ (ГБО)",
         hybrid: "Гибрид",
         electric: "Электро"
       },
@@ -121,6 +127,11 @@ export const adminDictionary = {
       cancel: "Болдырмау",
       saving: "Сақталуда...",
       selectOption: "Таңдаңыз...",
+      condition: "Жағдайы",
+      conditions: {
+        new: "Жаңа",
+        used: "Жүрілген"
+      },
       bodyTypes: {
         sedan: "Седан",
         suv: "Жол талғамайтын",
@@ -133,6 +144,7 @@ export const adminDictionary = {
       fuelTypes: {
         petrol: "Бензин",
         diesel: "Дизель",
+        gas: "Газ (ГБО)",
         hybrid: "Гибрид",
         electric: "Электр"
       },

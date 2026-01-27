@@ -18,6 +18,7 @@ model Car {
   price        Int
   mileage      Int
   bodyType     String
+  condition    String   @default("used")
   fuelType     String
   transmission String
   driveType    String

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Car } from '@/lib/cars';
 import { CarForm } from './CarForm';
 import { Button } from '@/components/ui/Button';
-import { Plus, Trash2, LogOut, Lock } from 'lucide-react';
+import { Plus, Trash2, LogOut } from 'lucide-react';
 import Image from 'next/image';
 import { formatPrice } from '@/lib/utils';
 import { getCars, createCar, updateCar, deleteCar } from '@/app/actions';

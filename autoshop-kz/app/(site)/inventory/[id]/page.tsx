@@ -8,14 +8,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const car = await getCar(id);
   
   if (!car) {
-    // For dynamic cars, we can't generate specific metadata on server
     return {
-      title: 'AutoShop KZ',
+      title: 'Aqylbay auto market',
     };
   }
 
   return {
-    title: `${car.make} ${car.model} | AutoShop KZ`,
+    title: `${car.make} ${car.model} | Aqylbay auto market`,
     description: `Сатып алыңыз ${car.year} ${car.make} ${car.model}. Бағасы: ${car.price} KZT. ${car.description.kz.substring(0, 120)}...`,
     openGraph: {
       images: car.images[0] ? [car.images[0]] : [],

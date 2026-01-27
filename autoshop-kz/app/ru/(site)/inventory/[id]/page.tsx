@@ -9,12 +9,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   
   if (!car) {
     return {
-      title: 'AutoShop KZ',
+      title: 'Aqylbay auto market',
     };
   }
 
   return {
-    title: `${car.make} ${car.model} | AutoShop KZ`,
+    title: `${car.make} ${car.model} | Aqylbay auto market`,
     description: `Купить ${car.year} ${car.make} ${car.model}. Цена: ${car.price} KZT. ${car.description.ru.substring(0, 120)}...`,
     openGraph: {
       images: car.images[0] ? [car.images[0]] : [],

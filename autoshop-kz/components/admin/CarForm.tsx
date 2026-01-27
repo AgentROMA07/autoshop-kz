@@ -5,7 +5,7 @@ import { Car } from '@/lib/cars';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
-import { Plus, X, Upload, Save } from 'lucide-react';
+import { Plus, X, Upload } from 'lucide-react';
 import Image from 'next/image';
 import { adminDictionary } from '@/lib/admin-dictionary';
 
@@ -29,6 +29,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
     year: initialData?.year || new Date().getFullYear(),
     price: initialData?.price || 0,
     mileage: initialData?.mileage || 0,
+    condition: initialData?.condition || 'used',
     bodyType: initialData?.bodyType || 'sedan',
     fuelType: initialData?.fuelType || 'petrol',
     transmission: initialData?.transmission || 'automatic',
@@ -152,6 +153,18 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
             placeholder={lang === 'ru' ? "Белый" : "Ақ"}
           />
         </div>
+        <div className="space-y-2">
+          <Label>{dict.form.condition}</Label>
+          <select 
+            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+            value={formData.condition}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onChange={e => setFormData({...formData, condition: e.target.value as any})}
+          >
+            <option value="new">{dict.form.conditions.new}</option>
+            <option value="used">{dict.form.conditions.used}</option>
+          </select>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -180,6 +193,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
           >
             <option value="petrol">{dict.form.fuelTypes.petrol}</option>
             <option value="diesel">{dict.form.fuelTypes.diesel}</option>
+            <option value="gas">{dict.form.fuelTypes.gas}</option>
             <option value="electric">{dict.form.fuelTypes.electric}</option>
             <option value="hybrid">{dict.form.fuelTypes.hybrid}</option>
           </select>
@@ -210,6 +224,25 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
             <option value="rwd">{dict.form.driveTypes.rwd}</option>
             <option value="awd">{dict.form.driveTypes.awd}</option>
           </select>
+        </div>
+        <div className="space-y-2">
+          <Label>{dict.form.engineVolume}</Label>
+          <Input 
+            type="number" 
+            step="0.1"
+            value={formData.engineVolume || ''} 
+            onChange={e => setFormData({...formData, engineVolume: parseFloat(e.target.value)})}
+            placeholder="2.5"
+          />
+        </div>
+        <div className="space-y-2">
+          <Label>{dict.form.power}</Label>
+          <Input 
+            type="number" 
+            value={formData.power || ''} 
+            onChange={e => setFormData({...formData, power: parseInt(e.target.value)})}
+            placeholder="200"
+          />
         </div>
       </div>
 

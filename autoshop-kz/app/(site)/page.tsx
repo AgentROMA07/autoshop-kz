@@ -4,7 +4,6 @@ import { Benefits } from "@/components/sections/Benefits";
 import { FeaturedCars } from "@/components/sections/FeaturedCars";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { FAQ } from "@/components/sections/FAQ";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { getCars } from "@/app/actions";
 
@@ -22,7 +21,6 @@ export default async function Home() {
       <ServicesSection dictionary={dictionary} />
       <HowItWorks dictionary={dictionary} />
       {/* <Testimonials dictionary={dictionary} /> */}
-      <FAQ dictionary={dictionary} />
       <ContactSection dictionary={dictionary} />
     </main>
   );

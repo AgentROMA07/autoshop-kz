@@ -8,16 +8,17 @@ import { Phone, MapPin, Clock, Mail } from 'lucide-react';
 interface ContactSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dictionary: any;
+  withTitle?: boolean;
 }
 
-export function ContactSection({ dictionary }: ContactSectionProps) {
+export function ContactSection({ dictionary, withTitle = true }: ContactSectionProps) {
   const content = dictionary.contact;
   const brand = getBrandConfig();
 
   return (
     <section className="py-20 bg-background" id="contact">
       <Container>
-        <h2 className="text-3xl font-bold text-center mb-12">{content.title}</h2>
+        {withTitle && <h2 className="text-3xl font-bold text-center mb-12">{content.title}</h2>}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info */}
           <Card className="h-full border-none shadow-md bg-card">
@@ -64,7 +65,6 @@ export function ContactSection({ dictionary }: ContactSectionProps) {
             </CardContent>
           </Card>
 
-          {/* Map */}
           <div className="w-full h-[400px] lg:h-auto min-h-[400px] bg-muted rounded-xl overflow-hidden relative shadow-md border border-border">
             <iframe 
               width="100%" 
@@ -74,10 +74,20 @@ export function ContactSection({ dictionary }: ContactSectionProps) {
               scrolling="no" 
               marginHeight={0} 
               marginWidth={0} 
-              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Shymkent, Erimbetova 159/1&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed"
-              style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.8)' }}
+              src="https://maps.google.com/maps?width=100%25&height=600&hl=ru&q=42.350449,69.635514&ie=UTF8&t=&z=16&iwloc=B&output=embed"
+              style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.9)' }}
               className="absolute inset-0"
             ></iframe>
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+              <a
+                href={brand.contact.mapLink}
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-2 rounded-full bg-background/90 text-sm font-medium text-primary border border-primary hover:bg-primary hover:text-black transition"
+              >
+                Открыть в 2GIS
+              </a>
+            </div>
           </div>
         </div>
       </Container>

@@ -65,7 +65,9 @@ export function Header({ dictionary, locale }: HeaderProps) {
 
         <div className="flex items-center gap-4">
           <div className="hidden lg:flex flex-col items-end mr-4">
-             <span className="text-xs text-neutral-400">Свяжитесь с нами</span>
+             <span className="text-xs text-neutral-400">
+               {locale === 'ru' ? 'Свяжитесь с нами' : 'бізбен байланысыңыз'}
+             </span>
              <a href={`tel:${brand.contact.phone}`} className="font-bold text-lg leading-none hover:text-primary transition-colors">
                {brand.contact.phone}
              </a>
