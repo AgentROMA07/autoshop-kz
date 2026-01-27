@@ -200,7 +200,7 @@ export function InventoryFilters({ cars, locale, onFilterChange, className }: In
           <div className="space-y-2">
             <Label>Тип кузова</Label>
             <div className="flex flex-wrap gap-2">
-              {['sedan', 'suv', 'hatchback', 'coupe', 'wagon', 'pickup', 'van'].map((type) => (
+              {(['sedan','suv','hatchback','coupe','wagon','minivan','pickup'] as const).map((type) => (
                 <button
                   key={type}
                   onClick={() => toggleBodyType(type)}
@@ -226,7 +226,7 @@ export function InventoryFilters({ cars, locale, onFilterChange, className }: In
           <div className="space-y-2">
             <Label>Тип топлива</Label>
             <div className="grid grid-cols-2 gap-2">
-              {['petrol', 'diesel', 'gas', 'hybrid', 'electric'].map((type) => (
+              {(['petrol','diesel','gas','hybrid','electric'] as const).map((type) => (
                 <label key={type} className="flex items-center gap-2 cursor-pointer">
                   <input 
                     type="checkbox" 
@@ -244,7 +244,7 @@ export function InventoryFilters({ cars, locale, onFilterChange, className }: In
           <div className="space-y-2">
             <Label>Коробка передач</Label>
             <div className="grid grid-cols-2 gap-2">
-              {['automatic', 'manual', 'robot', 'cvt'].map((type) => (
+              {(['automatic','manual','robot','cvt'] as const).map((type) => (
                 <label key={type} className="flex items-center gap-2 cursor-pointer">
                   <input 
                     type="checkbox" 
@@ -252,7 +252,9 @@ export function InventoryFilters({ cars, locale, onFilterChange, className }: In
                     onChange={() => handleCheckboxChange('transmissions', type)}
                     className="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary"
                   />
-                  <span className="text-sm">{dict.transmissions[type === 'cvt' ? 'variator' : type] || type}</span>
+                  <span className="text-sm">
+                    {dict.transmissions[(type === 'cvt' ? 'variator' : type) as 'automatic' | 'manual' | 'robot' | 'variator'] || type}
+                  </span>
                 </label>
               ))}
             </div>
@@ -262,7 +264,7 @@ export function InventoryFilters({ cars, locale, onFilterChange, className }: In
           <div className="space-y-2">
             <Label>Привод</Label>
             <div className="grid grid-cols-2 gap-2">
-              {['fwd', 'rwd', 'awd'].map((type) => (
+              {(['fwd','rwd','awd'] as const).map((type) => (
                 <label key={type} className="flex items-center gap-2 cursor-pointer">
                   <input 
                     type="checkbox" 
