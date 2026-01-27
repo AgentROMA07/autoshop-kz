@@ -68,7 +68,11 @@
     "form_name": "Имя",
     "form_phone": "Телефон",
     "form_submit": "Отправить",
-    "success": "Заявка принята!"
+    "success": "Заявка принята!",
+    "workingHoursLabel": "Режим работы",
+    "workingHoursValue": "Ежедневно: 09:00 - 20:00",
+    "openIn2GIS": "Открыть в 2GIS",
+    "emailLabel": "Email"
   },
   "footer": {
     "rights": "Все права защищены."

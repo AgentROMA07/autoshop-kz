@@ -48,8 +48,8 @@ export function ContactSection({ dictionary, withTitle = true }: ContactSectionP
                   <Clock className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Working Hours</h3>
-                  <p className="text-muted-foreground text-lg">{brand.contact.workingHours}</p>
+                  <h3 className="font-bold text-lg mb-1">{content.workingHoursLabel}</h3>
+                  <p className="text-muted-foreground text-lg">{content.workingHoursValue}</p>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@ export function ContactSection({ dictionary, withTitle = true }: ContactSectionP
                   <Mail className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Email</h3>
+                  <h3 className="font-bold text-lg mb-1">{content.emailLabel}</h3>
                   <p className="text-muted-foreground text-lg">{brand.contact.email}</p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export function ContactSection({ dictionary, withTitle = true }: ContactSectionP
                 rel="noreferrer"
                 className="px-4 py-2 rounded-full bg-background/90 text-sm font-medium text-primary border border-primary hover:bg-primary hover:text-black transition"
               >
-                Открыть в 2GIS
+                {content.openIn2GIS}
               </a>
             </div>
           </div>

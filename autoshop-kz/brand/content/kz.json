@@ -68,7 +68,11 @@
     "form_name": "Атыңыз",
     "form_phone": "Телефон",
     "form_submit": "Жіберу",
-    "success": "Өтінім қабылданды!"
+    "success": "Өтінім қабылданды!",
+    "workingHoursLabel": "Жұмыс уақыты",
+    "workingHoursValue": "Күнделікті: 09:00 - 20:00",
+    "openIn2GIS": "2GIS-те ашу",
+    "emailLabel": "Email"
   },
   "footer": {
     "rights": "Барлық құқықтар қорғалған."
