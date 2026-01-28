@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Car } from '@/lib/cars';
 import { CarForm } from './CarForm';
 import { Button } from '@/components/ui/Button';
-import { Plus, Trash2, LogOut } from 'lucide-react';
+import { Plus, Trash2, LogOut, Edit } from 'lucide-react';
 import Image from 'next/image';
 import { formatPrice } from '@/lib/utils';
 import { getCars, createCar, updateCar, deleteCar } from '@/app/actions';
@@ -92,7 +92,7 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="w-full px-4 h-16 flex items-center justify-between">
           <h1 className="text-xl font-bold text-gray-900">{dict.dashboard}</h1>
           <div className="flex items-center gap-4">
             <div className="flex items-center bg-gray-100 rounded-lg p-1 mr-2">
@@ -119,8 +119,8 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
+      <main className="w-full py-8 px-0 sm:px-4">
+        <div className="bg-white sm:rounded-xl shadow-sm border-y sm:border overflow-hidden">
           <div className="p-6 border-b">
             <h2 className="text-lg font-semibold text-gray-900">{dict.inventory} ({inventory.length})</h2>
           </div>
@@ -139,33 +139,47 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
             ) : null}
 
             {inventory.map((car) => (
-              <div key={car.id} className="p-4 flex items-center gap-4 hover:bg-gray-50 transition-colors">
-                <div className="h-20 w-32 relative rounded-lg overflow-hidden bg-gray-100 shrink-0">
-                  <Image 
-                    src={car.images[0]} 
-                    alt={car.model}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-lg truncate">{car.make} {car.model}</h3>
-                  <div className="text-sm text-gray-500 flex gap-4 mt-1">
-                    <span>{car.year}</span>
-                    <span>•</span>
-                    <span>{formatPrice(car.price)}</span>
-                    <span>•</span>
-                    <span>{car.mileage.toLocaleString()} км</span>
+              <div key={car.id} className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 hover:bg-gray-50 transition-colors">
+                <div className="flex w-full sm:w-auto items-center gap-4">
+                  <div className="h-16 w-24 sm:h-20 sm:w-32 relative rounded-lg overflow-hidden bg-gray-100 shrink-0">
+                    <Image 
+                      src={car.images[0]} 
+                      alt={car.model}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  {/* Mobile-only title/details for better space usage */}
+                  <div className="sm:hidden flex-1 min-w-0">
+                    <h3 className="font-bold text-base truncate text-gray-900">{car.make} {car.model}</h3>
+                    <div className="text-xs text-gray-500 mt-1">
+                       {formatPrice(car.price)}
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-2">
+
+                <div className="flex-1 min-w-0 w-full sm:w-auto mt-2 sm:mt-0">
+                  <h3 className="hidden sm:block font-bold text-lg truncate text-gray-900">{car.make} {car.model}</h3>
+                  <div className="text-sm text-gray-500 flex flex-wrap gap-x-4 gap-y-1 mt-1">
+                    <span className="hidden sm:inline">{car.year}</span>
+                    <span className="hidden sm:inline">•</span>
+                    <span className="hidden sm:inline">{formatPrice(car.price)}</span>
+                    <span className="hidden sm:inline">•</span>
+                    <span>{car.mileage.toLocaleString()} км</span>
+                    {/* Mobile details expanded */}
+                    <span className="sm:hidden">{car.year} г.</span>
+                  </div>
+                </div>
+
+                <div className="flex gap-2 w-full sm:w-auto justify-end mt-2 sm:mt-0">
                   <Button 
                     variant="ghost" 
                     size="sm"
                     className="text-blue-600 hover:text-blue-700 hover:bg-blue-50"
                     onClick={() => handleEdit(car)}
                   >
-                    {dict.edit}
+                    <Edit className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">{dict.edit}</span>
                   </Button>
                   <Button 
                     variant="ghost" 

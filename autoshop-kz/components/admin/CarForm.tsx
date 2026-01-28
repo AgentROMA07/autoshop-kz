@@ -102,6 +102,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.make}</Label>
           <Input 
+            className="bg-white text-gray-900"
             required 
             value={formData.make} 
             onChange={e => setFormData({...formData, make: e.target.value})}
@@ -111,6 +112,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.model}</Label>
           <Input 
+            className="bg-white text-gray-900"
             required 
             value={formData.model} 
             onChange={e => setFormData({...formData, model: e.target.value})}
@@ -120,6 +122,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.year}</Label>
           <Input 
+            className="bg-white text-gray-900"
             type="number" 
             required 
             value={formData.year} 
@@ -129,6 +132,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.price}</Label>
           <Input 
+            className="bg-white text-gray-900"
             type="number" 
             required 
             value={formData.price} 
@@ -138,6 +142,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.mileage}</Label>
           <Input 
+            className="bg-white text-gray-900"
             type="number" 
             required 
             value={formData.mileage} 
@@ -147,6 +152,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.color}</Label>
           <Input 
+            className="bg-white text-gray-900"
             required 
             value={formData.color} 
             onChange={e => setFormData({...formData, color: e.target.value})}
@@ -156,7 +162,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.condition}</Label>
           <select 
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+            className="flex h-10 w-full rounded-md border border-input bg-white text-gray-900 px-3 py-2 text-sm ring-offset-background"
             value={formData.condition}
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             onChange={e => setFormData({...formData, condition: e.target.value as any})}
@@ -171,7 +177,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.bodyType}</Label>
           <select 
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+            className="flex h-10 w-full rounded-md border border-input bg-white text-gray-900 px-3 py-2 text-sm ring-offset-background"
             value={formData.bodyType}
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             onChange={e => setFormData({...formData, bodyType: e.target.value as any})}
@@ -186,7 +192,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.fuelType}</Label>
           <select 
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+            className="flex h-10 w-full rounded-md border border-input bg-white text-gray-900 px-3 py-2 text-sm ring-offset-background"
             value={formData.fuelType}
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             onChange={e => setFormData({...formData, fuelType: e.target.value as any})}
@@ -201,7 +207,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.transmission}</Label>
           <select 
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+            className="flex h-10 w-full rounded-md border border-input bg-white text-gray-900 px-3 py-2 text-sm ring-offset-background"
             value={formData.transmission}
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             onChange={e => setFormData({...formData, transmission: e.target.value as any})}
@@ -215,7 +221,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.driveType}</Label>
           <select 
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+            className="flex h-10 w-full rounded-md border border-input bg-white text-gray-900 px-3 py-2 text-sm ring-offset-background"
             value={formData.driveType}
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             onChange={e => setFormData({...formData, driveType: e.target.value as any})}
@@ -228,6 +234,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.engineVolume}</Label>
           <Input 
+            className="bg-white text-gray-900"
             type="number" 
             step="0.1"
             value={formData.engineVolume || ''} 
@@ -238,6 +245,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <div className="space-y-2">
           <Label>{dict.form.power}</Label>
           <Input 
+            className="bg-white text-gray-900"
             type="number" 
             value={formData.power || ''} 
             onChange={e => setFormData({...formData, power: parseInt(e.target.value)})}
@@ -251,7 +259,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
           <div className="space-y-2">
             <Label>{dict.form.descriptionRu}</Label>
             <textarea 
-              className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex min-h-[80px] w-full rounded-md border border-input bg-white text-gray-900 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               value={typeof formData.description === 'object' ? formData.description.ru : formData.description || ''}
               onChange={e => setFormData({
                 ...formData, 
@@ -265,7 +273,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
           <div className="space-y-2">
             <Label>{dict.form.descriptionKz}</Label>
             <textarea 
-              className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex min-h-[80px] w-full rounded-md border border-input bg-white text-gray-900 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               value={typeof formData.description === 'object' ? formData.description.kz : ''}
               onChange={e => setFormData({
                 ...formData, 
@@ -312,6 +320,7 @@ export function CarForm({ initialData, onSave, onCancel, lang, dict }: CarFormPr
         <Label>{dict.form.features}</Label>
         <div className="flex gap-2">
           <Input 
+            className="bg-white text-gray-900"
             value={featureInput}
             onChange={e => setFeatureInput(e.target.value)}
             placeholder={dict.form.featurePlaceholder}

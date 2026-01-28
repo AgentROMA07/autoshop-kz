@@ -65,7 +65,7 @@ export default function AdminPage() {
                 placeholder="Введите логин"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="h-12 text-lg"
+                className="h-12 text-lg bg-white text-gray-900"
                 autoFocus
               />
             </div>
@@ -78,7 +78,7 @@ export default function AdminPage() {
                 placeholder="Введите пароль"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="h-12 text-lg font-mono"
+                className="h-12 text-lg font-mono bg-white text-gray-900"
               />
             </div>
             {error && <p className="text-red-500 text-sm mt-2">Неверный логин или пароль</p>}
