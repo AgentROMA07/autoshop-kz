@@ -1,0 +1,166 @@
+export const adminDictionary = {
+  ru: {
+    dashboard: "Панель управления",
+    inventory: "Ваш инвентарь",
+    addCar: "Добавить авто",
+    logout: "Выйти",
+    editCar: "Редактировать автомобиль",
+    addCarTitle: "Добавить автомобиль",
+    backToList: "Назад к списку",
+    saveError: "Ошибка при сохранении. Попробуйте еще раз.",
+    deleteConfirm: "Вы уверены, что хотите удалить этот автомобиль?",
+    deleteError: "Ошибка при удалении",
+    price: "Цена",
+    year: "Год",
+    mileage: "Пробег",
+    actions: "Действия",
+    edit: "Редактировать",
+    delete: "Удалить",
+    noCars: "Нет автомобилей",
+    loading: "Загрузка...",
+    image: "Фото",
+    model: "Модель",
+    form: {
+      make: "Марка",
+      model: "Модель",
+      year: "Год выпуска",
+      price: "Цена (KZT)",
+      mileage: "Пробег (км)",
+      bodyType: "Тип кузова",
+      fuelType: "Тип топлива",
+      transmission: "Коробка передач",
+      driveType: "Привод",
+      color: "Цвет",
+      vin: "VIN код (необязательно)",
+      engineVolume: "Объем двигателя (л)",
+      power: "Мощность (л.с.)",
+      description: "Описание",
+      descriptionRu: "Описание (на русском)",
+      descriptionKz: "Описание (на казахском)",
+      features: "Особенности / Комплектация",
+      addFeature: "Добавить",
+      featurePlaceholder: "Например: Кожаный салон",
+      images: "Фотографии",
+      uploadImages: "Загрузить фото",
+      save: "Сохранить",
+      cancel: "Отмена",
+      saving: "Сохранение...",
+      selectOption: "Выберите...",
+      condition: "Состояние",
+      conditions: {
+        new: "Новые",
+        used: "С пробегом"
+      },
+      bodyTypes: {
+        sedan: "Седан",
+        suv: "Внедорожник",
+        hatchback: "Хэтчбек",
+        wagon: "Универсал",
+        coupe: "Купе",
+        minivan: "Минивэн",
+        pickup: "Пикап"
+      },
+      fuelTypes: {
+        petrol: "Бензин",
+        diesel: "Дизель",
+        gas: "Газ (ГБО)",
+        hybrid: "Гибрид",
+        electric: "Электро"
+      },
+      transmissions: {
+        automatic: "Автомат",
+        manual: "Механика",
+        robot: "Робот",
+        variator: "Вариатор"
+      },
+      driveTypes: {
+        fwd: "Передний",
+        rwd: "Задний",
+        awd: "Полный"
+      }
+    }
+  },
+  kz: {
+    dashboard: "Басқару панелі",
+    inventory: "Сіздің инвентарь",
+    addCar: "Көлік қосу",
+    logout: "Шығу",
+    editCar: "Көлікті өңдеу",
+    addCarTitle: "Көлік қосу",
+    backToList: "Тізімге оралу",
+    saveError: "Сақтау кезінде қате шықты. Қайталап көріңіз.",
+    deleteConfirm: "Бұл көлікті өшіргіңіз келетініне сенімдісіз бе?",
+    deleteError: "Өшіру кезінде қате шықты",
+    price: "Бағасы",
+    year: "Жылы",
+    mileage: "Жүрісі",
+    actions: "Әрекеттер",
+    edit: "Өңдеу",
+    delete: "Өшіру",
+    noCars: "Көліктер жоқ",
+    loading: "Жүктелуде...",
+    image: "Сурет",
+    model: "Моделі",
+    form: {
+      make: "Маркасы",
+      model: "Моделі",
+      year: "Шығарылған жылы",
+      price: "Бағасы (KZT)",
+      mileage: "Жүрісі (км)",
+      bodyType: "Кузов түрі",
+      fuelType: "Жанармай түрі",
+      transmission: "Беріліс қорабы",
+      driveType: "Жетек",
+      color: "Түсі",
+      vin: "VIN код (міндетті емес)",
+      engineVolume: "Қозғалтқыш көлемі (л)",
+      power: "Қуаты (а.к.)",
+      description: "Сипаттама",
+      descriptionRu: "Сипаттама (орысша)",
+      descriptionKz: "Сипаттама (қазақша)",
+      features: "Ерекшеліктері / Жинақтау",
+      addFeature: "Қосу",
+      featurePlaceholder: "Мысалы: Былғары салоны",
+      images: "Суреттер",
+      uploadImages: "Сурет жүктеу",
+      save: "Сақтау",
+      cancel: "Болдырмау",
+      saving: "Сақталуда...",
+      selectOption: "Таңдаңыз...",
+      condition: "Жағдайы",
+      conditions: {
+        new: "Жаңа",
+        used: "Жүрілген"
+      },
+      bodyTypes: {
+        sedan: "Седан",
+        suv: "Жол талғамайтын",
+        hatchback: "Хэтчбек",
+        wagon: "Универсал",
+        coupe: "Купе",
+        minivan: "Минивэн",
+        pickup: "Пикап"
+      },
+      fuelTypes: {
+        petrol: "Бензин",
+        diesel: "Дизель",
+        gas: "Газ (ГБО)",
+        hybrid: "Гибрид",
+        electric: "Электр"
+      },
+      transmissions: {
+        automatic: "Автомат",
+        manual: "Механика",
+        robot: "Робот",
+        variator: "Вариатор"
+      },
+      driveTypes: {
+        fwd: "Алдыңғы",
+        rwd: "Артқы",
+        awd: "Толық"
+      }
+    }
+  }
+};
+
+export type AdminLang = 'ru' | 'kz';
